@@ -1,0 +1,172 @@
+{
+  "panelData": {
+    "name": "mylight",
+    "model": "Modèle du panneau 1",
+    "powerStc": 405,
+    "powerNoct": 303.75,
+    "temperatureCoefficient": 45,
+    "noctTemperature": 45,
+    "cellType": "Polycristallin",
+    "city": "Bordeaux",
+    "testDate": "2025-04-03",
+    "irradiance": 1000,
+    "duration": 1,
+    "current": 10.87,
+    "cableResistance": 0.05,
+    "realEnergy": 228,
+    "isBifacial": false,
+    "weatherData": {
+      "temperature": 14.4,
+      "humidity": 77,
+      "windSpeed": 6.3,
+      "cloudCover": 80,
+      "solarIrradiance": 396.00000000000006,
+      "annualAverageTemperature": 15.5
+    },
+    "realIrradianceData": [
+      800
+    ]
+  },
+  "results": {
+    "theoreticalEnergyNoct": 303.75,
+    "theoreticalEnergyStc": 405,
+    "cableLoss": 5.907844999999999,
+    "temperatureLoss": 9.337275,
+    "adjustedRealEnergy": 228,
+    "prNoct": 0.7362965404606494,
+    "prStc": 0.5548689390439844,
+    "efficiencyPercentage": 73.62965404606494,
+    "estimatedAnnualProduction": 402.57013349686,
+    "panelAnalysis": "Le panneau solaire 'mylight' de modèle 'Modèle du panneau 1' a été analysé pour sa performance. Les données montrent que le panneau a produit 228 Wh d'énergie réelle pendant la durée de test. L'énergie théorique calculée sous conditions NOCT est de 303.75 Wh, et sous conditions STC, elle est de 405 Wh. Les pertes dans les câbles sont de 5.9078 Wh, et les pertes dues à la température sont de 9.337275 Wh. Le ratio de performance (PR) sous conditions NOCT est de 0.7363, ce qui est dans la plage normale pour une installation solaire de haute qualité. Le PR sous conditions STC est de 0.5549, ce qui est attendu étant donné les conditions d'irradiance et de température.",
+    "performanceRating": "La performance du panneau solaire est évaluée comme étant bonne. Le PR de 0.7363 sous conditions NOCT est dans la plage normale attendue pour une installation solaire de haute qualité. Les pertes dues aux câbles et à la température sont prises en compte, et l'énergie réelle produite est cohérente avec les conditions environnementales mesurées.",
+    "improvementSuggestions": [
+      "Réduire la résistance des câbles pour minimiser les pertes d'énergie.",
+      "Optimiser l'orientation et l'inclinaison des panneaux pour maximiser l'exposition solaire.",
+      "Installer des systèmes de refroidissement pour maintenir une température optimale des panneaux.",
+      "Utiliser des panneaux bifaciaux pour augmenter la production d'énergie.",
+      "Assurer une maintenance régulière pour éviter l'accumulation de poussière et de saleté sur les panneaux."
+    ],
+    "factorsAffectingPR": [
+      "La couverture nuageuse de 80% réduit significativement l'irradiance solaire reçue par le panneau.",
+      "La température ambiante de 14.4°C affecte la performance du panneau, bien que l'impact soit relativement faible.",
+      "Les pertes dans les câbles représentent une perte d'énergie non négligeable.",
+      "L'irradiance mesurée est inférieure à l'irradiance standard, ce qui affecte la production d'énergie."
+    ],
+    "weatherAnalysis": "Les conditions météorologiques à Bordeaux pendant la période de test montrent une température ambiante de 14.4°C, une humidité de 77%, et une couverture nuageuse de 80%. L'irradiance solaire mesurée est de 396 W/m², ce qui est inférieur à l'irradiance standard de 1000 W/m². Ces conditions ont un impact significatif sur la performance du panneau solaire, notamment en réduisant l'irradiance solaire reçue.",
+    "coherenceAnalysis": "Les données fournies semblent cohérentes. Les valeurs calculées pour le PR et les pertes d'énergie sont dans les plages attendues. Les conditions météorologiques et les ajustements effectués pour la couverture nuageuse et l'irradiance sont pris en compte de manière appropriée.",
+    "auditSteps": [
+      {
+        "name": "Calcul de l'énergie théorique NOCT",
+        "formula": "Puissance NOCT × Durée",
+        "inputs": {
+          "Puissance NOCT": "303.75 W",
+          "Durée": "1 h"
+        },
+        "result": 303.75,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions NOCT pendant la durée spécifiée."
+      },
+      {
+        "name": "Calcul de l'énergie théorique STC",
+        "formula": "Puissance STC × Durée × (Irradiance / 1000)",
+        "inputs": {
+          "Puissance STC": "405 W",
+          "Durée": "1 h",
+          "Irradiance": "1000 W/m²",
+          "Irradiance STC": "1000 W/m²"
+        },
+        "result": 405,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions STC, ajustée pour l'irradiance réelle."
+      },
+      {
+        "name": "Calcul des pertes dans les câbles",
+        "formula": "I² × R × Durée",
+        "inputs": {
+          "Courant (I)": "10.87 A",
+          "Résistance du câble (R)": "0.05 Ω",
+          "Durée": "1 h"
+        },
+        "result": 5.907844999999999,
+        "unit": "Wh",
+        "description": "Les pertes d'énergie dues à la résistance des câbles."
+      },
+      {
+        "name": "Calcul des pertes dues à la température",
+        "formula": "P_NOCT × |Coef_temp / 100| × |T_ambiant - 25°C| × Durée",
+        "inputs": {
+          "Puissance NOCT (P_NOCT)": "303.75 W",
+          "Coefficient de température (Coef_temp)": "45 %/°C",
+          "Température ambiante (T_ambiant)": "14.4 °C",
+          "Température STC": "25 °C",
+          "Durée": "1 h"
+        },
+        "result": 9.337275,
+        "unit": "Wh",
+        "description": "Pertes d'énergie dues à la différence entre la température ambiante et la température standard de test (25°C)."
+      },
+      {
+        "name": "Ajustement pour la couverture nuageuse",
+        "formula": "Énergie théorique × (Couverture nuageuse / 100) × 0.7",
+        "inputs": {
+          "Énergie théorique": "303.75 Wh",
+          "Couverture nuageuse": "80%",
+          "Facteur de réduction": "0.7"
+        },
+        "result": 170.1,
+        "unit": "Wh",
+        "description": "Réduction de l'énergie produite due à la couverture nuageuse. Une couverture de 100% réduit l'énergie de 70%."
+      },
+      {
+        "name": "Ajustement pour l'irradiance mesurée",
+        "formula": "Énergie théorique × (Irradiance mesurée / Irradiance standard - 1)",
+        "inputs": {
+          "Énergie théorique": "303.75 Wh",
+          "Irradiance mesurée": "396.00000000000006 W/m²",
+          "Irradiance standard": "1000 W/m²"
+        },
+        "result": -183.46499999999995,
+        "unit": "Wh",
+        "description": "Ajustement de l'énergie produite en fonction de l'irradiance solaire réelle par rapport à l'irradiance standard."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous NOCT",
+        "formula": "E_real / (E_theo_NOCT + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "228.00 Wh",
+          "Énergie théorique NOCT (E_theo_NOCT)": "303.75 Wh",
+          "Pertes câbles (P_cable)": "5.9078 Wh"
+        },
+        "result": 0.7362965404606494,
+        "unit": "",
+        "description": "Le ratio de performance (PR) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous STC",
+        "formula": "E_real / (E_theo_STC + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "228.00 Wh",
+          "Énergie théorique STC (E_theo_STC)": "405.00 Wh",
+          "Pertes câbles (P_cable)": "5.9078 Wh"
+        },
+        "result": 0.5548689390439844,
+        "unit": "",
+        "description": "Le ratio de performance STC (PR STC) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue sous conditions STC (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Estimation de la production annuelle",
+        "formula": "(Puissance STC × Heures d'ensoleillement × PR) / 1000",
+        "inputs": {
+          "Puissance STC": "405 W",
+          "Heures d'ensoleillement": "1350 h/an",
+          "PR": "0.7363"
+        },
+        "result": 402.57013349686,
+        "unit": "kWh/an",
+        "description": "Estimation de la production annuelle d'électricité basée sur les conditions locales d'ensoleillement et le ratio de performance calculé."
+      }
+    ]
+  },
+  "timestamp": "2025-04-03T18:21:49.947Z",
+  "source": "web-app"
+}
