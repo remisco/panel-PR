@@ -1,0 +1,159 @@
+{
+  "panelData": {
+    "name": "Inconnu DM500M10RT-B60HBT",
+    "model": "DM500M10RT-B60HBT",
+    "powerStc": 500,
+    "powerNoct": 376,
+    "temperatureCoefficient": 45,
+    "noctTemperature": 45,
+    "cellType": "Type N monocristallin",
+    "city": "Strasbourg",
+    "testDate": "2025-04-04",
+    "irradiance": 1000,
+    "duration": 1,
+    "current": 12.56,
+    "cableResistance": 0.05,
+    "realEnergy": 282,
+    "isBifacial": false,
+    "weatherData": {
+      "temperature": 23,
+      "humidity": 28,
+      "windSpeed": 10.5,
+      "cloudCover": 0,
+      "solarIrradiance": 850,
+      "annualAverageTemperature": 15.5
+    },
+    "realIrradianceData": [
+      800
+    ]
+  },
+  "results": {
+    "theoreticalEnergyNoct": 376,
+    "theoreticalEnergyStc": 500,
+    "cableLoss": 7.88768,
+    "temperatureLoss": 2.1808,
+    "adjustedRealEnergy": 282,
+    "prNoct": 0.7345898675362543,
+    "prStc": 0.5552408753053432,
+    "efficiencyPercentage": 73.45898675362544,
+    "estimatedAnnualProduction": 422.3891738333462,
+    "panelAnalysis": "Le panneau solaire Inconnu DM500M10RT-B60HBT a été analysé pour sa performance. Les données montrent que le panneau a produit 282 Wh d'énergie réelle pendant une durée de 1 heure. L'énergie théorique calculée sous conditions NOCT est de 376 Wh, et sous conditions STC, elle est de 500 Wh. Les pertes dans les câbles sont de 7.88768 Wh, et les pertes dues à la température sont de 2.1808 Wh. Le ratio de performance (PR) sous conditions NOCT est de 0.7346, ce qui est dans la plage normale pour une installation solaire de haute qualité. Le PR sous conditions STC est de 0.5552, ce qui est attendu étant donné les conditions d'irradiance et de température.",
+    "performanceRating": "La performance du panneau solaire est considérée comme normale. Le PR de 0.7346 sous conditions NOCT est dans la plage attendue pour une installation solaire de haute qualité. Le PR sous conditions STC est plus bas, ce qui est cohérent avec les conditions d'irradiance et de température mesurées.",
+    "improvementSuggestions": [
+      "Réduire la résistance des câbles pour minimiser les pertes d'énergie.",
+      "Optimiser l'orientation et l'inclinaison des panneaux pour maximiser l'irradiance solaire.",
+      "Installer des systèmes de refroidissement pour maintenir une température ambiante plus basse et réduire les pertes dues à la température.",
+      "Utiliser des panneaux bifaciaux pour augmenter la production d'énergie en capturant la lumière réfléchie."
+    ],
+    "factorsAffectingPR": [
+      "La résistance des câbles entraîne des pertes d'énergie.",
+      "La température ambiante affecte la performance du panneau, entraînant des pertes d'énergie.",
+      "L'irradiance solaire réelle est inférieure à l'irradiance standard, ce qui réduit l'énergie produite.",
+      "Les conditions météorologiques, telles que la couverture nuageuse et la vitesse du vent, peuvent affecter la performance du panneau."
+    ],
+    "weatherAnalysis": "Les conditions météorologiques à Strasbourg le 4 avril 2025 montrent une température ambiante de 23°C, une humidité de 28%, une vitesse du vent de 10.5 km/h, et une couverture nuageuse de 0%. L'irradiance solaire mesurée est de 850 W/m², ce qui est inférieur à l'irradiance standard de 1000 W/m². Ces conditions ont un impact sur la performance du panneau, notamment en termes de pertes dues à la température et d'ajustement de l'irradiance.",
+    "coherenceAnalysis": "Les données fournies semblent cohérentes. Le PR calculé est dans la plage normale pour une installation solaire de haute qualité. Les pertes dans les câbles et les ajustements pour la température et l'irradiance sont correctement pris en compte dans les calculs.",
+    "auditSteps": [
+      {
+        "name": "Calcul de l'énergie théorique NOCT",
+        "formula": "Puissance NOCT × Durée",
+        "inputs": {
+          "Puissance NOCT": "376 W",
+          "Durée": "1 h"
+        },
+        "result": 376,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions NOCT pendant la durée spécifiée."
+      },
+      {
+        "name": "Calcul de l'énergie théorique STC",
+        "formula": "Puissance STC × Durée × (Irradiance / 1000)",
+        "inputs": {
+          "Puissance STC": "500 W",
+          "Durée": "1 h",
+          "Irradiance": "1000 W/m²",
+          "Irradiance STC": "1000 W/m²"
+        },
+        "result": 500,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions STC, ajustée pour l'irradiance réelle."
+      },
+      {
+        "name": "Calcul des pertes dans les câbles",
+        "formula": "I² × R × Durée",
+        "inputs": {
+          "Courant (I)": "12.56 A",
+          "Résistance du câble (R)": "0.05 Ω",
+          "Durée": "1 h"
+        },
+        "result": 7.8876800000000005,
+        "unit": "Wh",
+        "description": "Les pertes d'énergie dues à la résistance des câbles."
+      },
+      {
+        "name": "Calcul des pertes dues à la température",
+        "formula": "P_NOCT × |Coef_temp / 100| × |T_ambiant - 25°C| × Durée",
+        "inputs": {
+          "Puissance NOCT (P_NOCT)": "376 W",
+          "Coefficient de température (Coef_temp)": "45 %/°C",
+          "Température ambiante (T_ambiant)": "23 °C",
+          "Température STC": "25 °C",
+          "Durée": "1 h"
+        },
+        "result": 2.1807999999999996,
+        "unit": "Wh",
+        "description": "Pertes d'énergie dues à la différence entre la température ambiante et la température standard de test (25°C)."
+      },
+      {
+        "name": "Ajustement pour l'irradiance mesurée",
+        "formula": "Énergie théorique × (Irradiance mesurée / Irradiance standard - 1)",
+        "inputs": {
+          "Énergie théorique": "376.00 Wh",
+          "Irradiance mesurée": "850 W/m²",
+          "Irradiance standard": "1000 W/m²"
+        },
+        "result": -56.400000000000006,
+        "unit": "Wh",
+        "description": "Ajustement de l'énergie produite en fonction de l'irradiance solaire réelle par rapport à l'irradiance standard."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous NOCT",
+        "formula": "E_real / (E_theo_NOCT + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "282.00 Wh",
+          "Énergie théorique NOCT (E_theo_NOCT)": "376.00 Wh",
+          "Pertes câbles (P_cable)": "7.8877 Wh"
+        },
+        "result": 0.7345898675362543,
+        "unit": "",
+        "description": "Le ratio de performance (PR) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous STC",
+        "formula": "E_real / (E_theo_STC + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "282.00 Wh",
+          "Énergie théorique STC (E_theo_STC)": "500.00 Wh",
+          "Pertes câbles (P_cable)": "7.8877 Wh"
+        },
+        "result": 0.5552408753053432,
+        "unit": "",
+        "description": "Le ratio de performance STC (PR STC) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue sous conditions STC (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Estimation de la production annuelle",
+        "formula": "(Puissance STC × Heures d'ensoleillement × PR) / 1000",
+        "inputs": {
+          "Puissance STC": "500 W",
+          "Heures d'ensoleillement": "1150 h/an",
+          "PR": "0.7346"
+        },
+        "result": 422.3891738333462,
+        "unit": "kWh/an",
+        "description": "Estimation de la production annuelle d'électricité basée sur les conditions locales d'ensoleillement et le ratio de performance calculé."
+      }
+    ]
+  },
+  "timestamp": "2025-04-04T14:01:28.968Z",
+  "source": "web-app"
+}
