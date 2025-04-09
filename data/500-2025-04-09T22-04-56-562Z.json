@@ -1,0 +1,177 @@
+{
+  "panelData": {
+    "name": "MSMDxxxM10NR-120BG",
+    "model": "500",
+    "manufacturer": "München Energieprodukte GmbH",
+    "powerStc": 500,
+    "powerNoct": 377,
+    "temperatureCoefficient": -0.29,
+    "noctTemperature": 42,
+    "cellType": "N-Type TOPCon Monocrystalline",
+    "city": "Saint-Étienne",
+    "testDate": "2025-04-09",
+    "irradiance": 1000,
+    "duration": 1,
+    "current": 13.55,
+    "cableResistance": 0.05,
+    "realEnergy": 283,
+    "isBifacial": true,
+    "bifacialEnvironment": {
+      "environmentId": "light-roof",
+      "gainPercentage": 6
+    },
+    "weatherData": {
+      "temperature": 10.6,
+      "humidity": 67,
+      "windSpeed": 2.6,
+      "cloudCover": 0,
+      "solarIrradiance": 880,
+      "annualAverageTemperature": 15.5
+    },
+    "realIrradianceData": [
+      800
+    ]
+  },
+  "results": {
+    "theoreticalEnergyNoct": 377,
+    "theoreticalEnergyStc": 500,
+    "cableLoss": 9.18,
+    "temperatureLoss": 15.74,
+    "adjustedRealEnergy": 283,
+    "prNoct": 0.7328,
+    "prStc": 0.5558,
+    "efficiencyPercentage": 73.28,
+    "estimatedAnnualProduction": 494.65,
+    "panelAnalysis": "Le panneau solaire MSMDxxxM10NR-120BG de München Energieprodukte GmbH a été testé à Saint-Étienne le 9 avril 2025. Le panneau est de type N-Type TOPCon Monocrystalline et est bifacial avec un gain bifacial de 6%. Les conditions de test incluent une irradiance de 1000 W/m², une température ambiante de 10.6°C, et une humidité de 67%. L'énergie réelle produite est de 283 Wh, ce qui est cohérent avec les conditions de test.",
+    "performanceRating": "Le ratio de performance (PR) sous NOCT est de 0.7328, ce qui est dans la plage normale pour une installation solaire de haute qualité. Le PR sous STC est de 0.5558, ce qui est également cohérent avec les conditions de test. Le PR ajusté pour le gain bifacial est de 0.7636, ce qui est une amélioration due à la face arrière du panneau.",
+    "improvementSuggestions": [
+      "Optimiser l'orientation et l'inclinaison des panneaux pour maximiser l'exposition solaire.",
+      "Réduire la résistance des câbles pour minimiser les pertes d'énergie.",
+      "Assurer une maintenance régulière pour éviter l'accumulation de poussière et de saleté sur les panneaux.",
+      "Utiliser des technologies de suivi solaire pour suivre la position du soleil et ajuster l'angle des panneaux en conséquence."
+    ],
+    "factorsAffectingPR": [
+      "La température ambiante affecte la performance du panneau, avec une perte de 15.74 Wh due à la différence de température.",
+      "Les pertes dans les câbles contribuent à une perte de 9.18 Wh.",
+      "L'irradiance mesurée est de 880 W/m², ce qui est inférieur à l'irradiance standard de 1000 W/m², entraînant une perte de 45.24 Wh.",
+      "Le gain bifacial de 6% améliore le PR, ajustant la valeur à 0.7636."
+    ],
+    "weatherAnalysis": "Les conditions météorologiques pendant le test incluent une température ambiante de 10.6°C, une humidité de 67%, et une vitesse du vent de 2.6 m/s. La couverture nuageuse était de 0%, ce qui indique des conditions claires. L'irradiance solaire mesurée était de 880 W/m², ce qui est légèrement inférieur à l'irradiance standard de 1000 W/m².",
+    "coherenceAnalysis": "Les données fournies sont cohérentes et les calculs de performance sont alignés avec les conditions de test. Le PR calculé est dans la plage normale, et les ajustements pour le gain bifacial sont appropriés.",
+    "auditSteps": [
+      {
+        "name": "Calcul de l'énergie théorique NOCT",
+        "formula": "Puissance NOCT × Durée",
+        "inputs": {
+          "Puissance NOCT": "377 W",
+          "Durée": "1 h"
+        },
+        "result": 377,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions NOCT pendant la durée spécifiée."
+      },
+      {
+        "name": "Calcul de l'énergie théorique STC",
+        "formula": "Puissance STC × Durée × (Irradiance / 1000)",
+        "inputs": {
+          "Puissance STC": "500 W",
+          "Durée": "1 h",
+          "Irradiance": "1000 W/m²",
+          "Irradiance STC": "1000 W/m²"
+        },
+        "result": 500,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions STC, ajustée pour l'irradiance réelle."
+      },
+      {
+        "name": "Calcul des pertes dans les câbles",
+        "formula": "I² × R × Durée",
+        "inputs": {
+          "Courant (I)": "13.55 A",
+          "Résistance du câble (R)": "0.05 Ω",
+          "Durée": "1 h"
+        },
+        "result": 9.180125000000002,
+        "unit": "Wh",
+        "description": "Les pertes d'énergie dues à la résistance des câbles."
+      },
+      {
+        "name": "Calcul des pertes dues à la température",
+        "formula": "P_NOCT × |Coef_temp / 100| × |T_ambiant - 25°C| × Durée",
+        "inputs": {
+          "Puissance NOCT (P_NOCT)": "377 W",
+          "Coefficient de température (Coef_temp)": "-0.29 %/°C",
+          "Température ambiante (T_ambiant)": "10.6 °C",
+          "Température STC": "25 °C",
+          "Durée": "1 h"
+        },
+        "result": 15.74352,
+        "unit": "Wh",
+        "description": "Pertes d'énergie dues à la différence entre la température ambiante et la température standard de test (25°C)."
+      },
+      {
+        "name": "Ajustement pour l'irradiance mesurée",
+        "formula": "Énergie théorique × (Irradiance mesurée / Irradiance standard - 1)",
+        "inputs": {
+          "Énergie théorique": "377.00 Wh",
+          "Irradiance mesurée": "880 W/m²",
+          "Irradiance standard": "1000 W/m²"
+        },
+        "result": -45.239999999999995,
+        "unit": "Wh",
+        "description": "Ajustement de l'énergie produite en fonction de l'irradiance solaire réelle par rapport à l'irradiance standard."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous NOCT",
+        "formula": "E_real / (E_theo_NOCT + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "283.00 Wh",
+          "Énergie théorique NOCT (E_theo_NOCT)": "377.00 Wh",
+          "Pertes câbles (P_cable)": "9.1801 Wh"
+        },
+        "result": 0.7328186555431873,
+        "unit": "",
+        "description": "Le ratio de performance (PR) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous STC",
+        "formula": "E_real / (E_theo_STC + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "283.00 Wh",
+          "Énergie théorique STC (E_theo_STC)": "500.00 Wh",
+          "Pertes câbles (P_cable)": "9.1801 Wh"
+        },
+        "result": 0.5557954564703405,
+        "unit": "",
+        "description": "Le ratio de performance STC (PR STC) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue sous conditions STC (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Estimation de la production annuelle",
+        "formula": "(Puissance STC × Heures d'ensoleillement × PR) / 1000",
+        "inputs": {
+          "Puissance STC": "500 W",
+          "Heures d'ensoleillement": "1350 h/an",
+          "PR": "0.7328"
+        },
+        "result": 494.65259249165143,
+        "unit": "kWh/an",
+        "description": "Estimation de la production annuelle d'électricité basée sur les conditions locales d'ensoleillement et le ratio de performance calculé."
+      },
+      {
+        "name": "Ajustement pour le gain bifacial",
+        "formula": "PR standard × (1 + Gain bifacial / 100)",
+        "inputs": {
+          "PR standard": "0.7328",
+          "Gain bifacial": "4.199999999999999%",
+          "Facteur bifacial": "0.7",
+          "Environnement": "light-roof (6%)"
+        },
+        "result": 0.7635970390760012,
+        "unit": "",
+        "description": "Ajustement du ratio de performance pour prendre en compte le gain de production dû à la face arrière du panneau bifacial."
+      }
+    ]
+  },
+  "timestamp": "2025-04-09T22:04:54.636Z",
+  "source": "web-app"
+}
