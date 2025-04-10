@@ -1,0 +1,177 @@
+{
+  "panelData": {
+    "name": "DM500M10RT-B60HBT",
+    "model": "DM500M10RT-B60HBT",
+    "manufacturer": "dmegc solar",
+    "powerStc": 500,
+    "powerNoct": 376,
+    "temperatureCoefficient": -0.33,
+    "noctTemperature": 42,
+    "cellType": "Type N monocristallin",
+    "city": "Angers",
+    "testDate": "2025-04-10",
+    "irradiance": 1000,
+    "duration": 1,
+    "current": 10.69,
+    "cableResistance": 0.05,
+    "realEnergy": 282,
+    "isBifacial": true,
+    "bifacialEnvironment": {
+      "environmentId": "flat-gravel",
+      "gainPercentage": 7
+    },
+    "weatherData": {
+      "temperature": 13.8,
+      "humidity": 54,
+      "windSpeed": 10.7,
+      "cloudCover": 0,
+      "solarIrradiance": 810,
+      "annualAverageTemperature": 15.5
+    },
+    "realIrradianceData": [
+      800
+    ]
+  },
+  "results": {
+    "theoreticalEnergyNoct": 376,
+    "theoreticalEnergyStc": 500,
+    "cableLoss": 5.713805,
+    "temperatureLoss": 13.89696,
+    "adjustedRealEnergy": 282,
+    "prNoct": 0.7387733854687284,
+    "prStc": 0.557627648705378,
+    "efficiencyPercentage": 73.87733854687283,
+    "estimatedAnnualProduction": 498.67203519139167,
+    "panelAnalysis": "Le panneau solaire DM500M10RT-B60HBT de dmeg solar a été testé à Angers le 10 avril 2025. Le ratio de performance (PR) sous conditions NOCT est de 73.9%, ce qui est dans la plage normale pour une installation solaire de haute qualité. Le PR sous conditions STC est de 55.8%, ce qui est également cohérent avec les données fournies. L'énergie réelle produite est de 282 Wh, ce qui est légèrement inférieur à l'énergie théorique attendue sous NOCT (376 Wh) mais prend en compte les pertes dans les câbles et les ajustements de température.",
+    "performanceRating": "La performance du panneau est normale. Le PR de 73.9% sous conditions NOCT est dans la plage attendue pour une installation solaire de haute qualité. Le PR sous conditions STC est également cohérent avec les données fournies.",
+    "improvementSuggestions": [
+      "Réduire la résistance des câbles pour minimiser les pertes d'énergie.",
+      "Optimiser l'orientation et l'inclinaison des panneaux pour maximiser l'exposition solaire.",
+      "Assurer une maintenance régulière pour éviter l'accumulation de poussière ou de saleté sur les panneaux.",
+      "Utiliser des technologies de suivi solaire pour suivre la position du soleil et ajuster l'angle des panneaux en conséquence."
+    ],
+    "factorsAffectingPR": [
+      "Les pertes dans les câbles contribuent à une réduction de l'énergie réelle produite.",
+      "Les conditions de température ambiante influencent la performance du panneau, avec une température de 13.8°C entraînant des pertes de 13.9 Wh.",
+      "L'irradiance solaire mesurée est de 810 W/m², ce qui est légèrement inférieur à l'irradiance standard de 1000 W/m², entraînant une réduction de l'énergie produite.",
+      "Le panneau est bifacial avec un gain de 7% dans un environnement de gravier plat, ce qui améliore légèrement le PR."
+    ],
+    "weatherAnalysis": "Les conditions météorologiques à Angers le jour du test montrent une température de 13.8°C, une humidité de 54%, une vitesse du vent de 10.7 km/h et une couverture nuageuse de 0%. L'irradiance solaire mesurée est de 810 W/m², ce qui est légèrement inférieur à l'irradiance standard de 1000 W/m². Ces conditions sont prises en compte dans le calcul du PR.",
+    "coherenceAnalysis": "Les données fournies sont cohérentes et les calculs effectués sont en ligne avec les valeurs attendues. Le PR de 73.9% sous conditions NOCT est dans la plage normale pour une installation solaire de haute qualité.",
+    "auditSteps": [
+      {
+        "name": "Calcul de l'énergie théorique NOCT",
+        "formula": "Puissance NOCT × Durée",
+        "inputs": {
+          "Puissance NOCT": "376 W",
+          "Durée": "1 h"
+        },
+        "result": 376,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions NOCT pendant la durée spécifiée."
+      },
+      {
+        "name": "Calcul de l'énergie théorique STC",
+        "formula": "Puissance STC × Durée × (Irradiance / 1000)",
+        "inputs": {
+          "Puissance STC": "500 W",
+          "Durée": "1 h",
+          "Irradiance": "1000 W/m²",
+          "Irradiance STC": "1000 W/m²"
+        },
+        "result": 500,
+        "unit": "Wh",
+        "description": "L'énergie théorique que le panneau devrait produire dans les conditions STC, ajustée pour l'irradiance réelle."
+      },
+      {
+        "name": "Calcul des pertes dans les câbles",
+        "formula": "I² × R × Durée",
+        "inputs": {
+          "Courant (I)": "10.69 A",
+          "Résistance du câble (R)": "0.05 Ω",
+          "Durée": "1 h"
+        },
+        "result": 5.713805,
+        "unit": "Wh",
+        "description": "Les pertes d'énergie dues à la résistance des câbles."
+      },
+      {
+        "name": "Calcul des pertes dues à la température",
+        "formula": "P_NOCT × |Coef_temp / 100| × |T_ambiant - 25°C| × Durée",
+        "inputs": {
+          "Puissance NOCT (P_NOCT)": "376 W",
+          "Coefficient de température (Coef_temp)": "-0.33 %/°C",
+          "Température ambiante (T_ambiant)": "13.8 °C",
+          "Température STC": "25 °C",
+          "Durée": "1 h"
+        },
+        "result": 13.896959999999998,
+        "unit": "Wh",
+        "description": "Pertes d'énergie dues à la différence entre la température ambiante et la température standard de test (25°C)."
+      },
+      {
+        "name": "Ajustement pour l'irradiance mesurée",
+        "formula": "Énergie théorique × (Irradiance mesurée / Irradiance standard - 1)",
+        "inputs": {
+          "Énergie théorique": "376.00 Wh",
+          "Irradiance mesurée": "810 W/m²",
+          "Irradiance standard": "1000 W/m²"
+        },
+        "result": -71.43999999999998,
+        "unit": "Wh",
+        "description": "Ajustement de l'énergie produite en fonction de l'irradiance solaire réelle par rapport à l'irradiance standard."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous NOCT",
+        "formula": "E_real / (E_theo_NOCT + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "282.00 Wh",
+          "Énergie théorique NOCT (E_theo_NOCT)": "376.00 Wh",
+          "Pertes câbles (P_cable)": "5.7138 Wh"
+        },
+        "result": 0.7387733854687284,
+        "unit": "",
+        "description": "Le ratio de performance (PR) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Calcul du ratio de performance (PR) sous STC",
+        "formula": "E_real / (E_theo_STC + P_cable)",
+        "inputs": {
+          "Énergie réelle (E_real)": "282.00 Wh",
+          "Énergie théorique STC (E_theo_STC)": "500.00 Wh",
+          "Pertes câbles (P_cable)": "5.7138 Wh"
+        },
+        "result": 0.557627648705378,
+        "unit": "",
+        "description": "Le ratio de performance STC (PR STC) est le rapport entre l'énergie réellement produite et l'énergie théorique attendue sous conditions STC (plus les pertes dans les câbles)."
+      },
+      {
+        "name": "Estimation de la production annuelle",
+        "formula": "(Puissance STC × Heures d'ensoleillement × PR) / 1000",
+        "inputs": {
+          "Puissance STC": "500 W",
+          "Heures d'ensoleillement": "1350 h/an",
+          "PR": "0.7388"
+        },
+        "result": 498.67203519139167,
+        "unit": "kWh/an",
+        "description": "Estimation de la production annuelle d'électricité basée sur les conditions locales d'ensoleillement et le ratio de performance calculé."
+      },
+      {
+        "name": "Ajustement pour le gain bifacial",
+        "formula": "PR standard × (1 + Gain bifacial / 100)",
+        "inputs": {
+          "PR standard": "0.7388",
+          "Gain bifacial": "4.8999999999999995%",
+          "Facteur bifacial": "0.7",
+          "Environnement": "flat-gravel (7%)"
+        },
+        "result": 0.7749732813566961,
+        "unit": "",
+        "description": "Ajustement du ratio de performance pour prendre en compte le gain de production dû à la face arrière du panneau bifacial."
+      }
+    ]
+  },
+  "timestamp": "2025-04-10T20:32:42.406Z",
+  "source": "web-app"
+}
